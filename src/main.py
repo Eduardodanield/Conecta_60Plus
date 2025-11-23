@@ -4,14 +4,18 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
+import sys
+sys.path.append('src')
+
 import config
-from perguntas_ampi import PERGUNTAS_AMPI, get_perguntas_aleatorias
+from perguntas_conecta60 import get_perguntas_gratuitas
 from analise_respostas import analisar_respostas, formatar_nome_especialidade
 from database import salvar_paciente, carregar_dados, get_estatisticas
+from gerar_pdf import gerar_pdf_relatorio
 
 # Configuração da página
 st.set_page_config(
-    page_title="AMPI-Predict",
+    page_title="Conecta 60+",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -57,7 +61,7 @@ def main():
         )
         
         st.markdown("---")
-        st.markdown("### Sobre o AMPI-Predict")
+        st.markdown("### Sobre o Conecta 60+")
         st.info("Sistema inteligente de avaliação geriátrica para identificação de riscos e encaminhamento médico adequado.")
     
     # Roteamento de páginas
@@ -71,7 +75,7 @@ def main():
 
 def pagina_inicio():
     """Página inicial com boas-vindas"""
-    st.markdown('<h1 class="main-header">🤖 AMPI-Predict</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🤖 Conecta 60+</h1>', unsafe_allow_html=True)
     st.markdown('<p style="text-align: center; font-size: 1.2rem;">Sistema de Avaliação de Risco Geriátrico Inteligente</p>', unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns(3)
@@ -89,8 +93,8 @@ def pagina_inicio():
     
     st.write("""
     1. **Cadastro**: Informe seus dados pessoais
-    2. **Questionário**: Responda 10 perguntas selecionadas aleatoriamente
-    3. **Análise**: Sistema avalia suas respostas
+    2. **Questionário**: Responda 10 perguntas extraídas do protocolo
+    3. **Análise**: Sistema avalia suas respostas com IA
     4. **Recomendação**: Receba indicação de especialidade médica e locais de atendimento
     """)
     
@@ -124,6 +128,7 @@ def coletar_dados_pessoais():
         with col1:
             nome = st.text_input("👤 Nome completo:", placeholder="Digite seu nome")
             idade = st.number_input("🎂 Idade:", min_value=60, max_value=120, value=65)
+            sexo = st.radio("⚧ Sexo:", ["Masculino", "Feminino"], horizontal=True)
         
         with col2:
             cidade = st.text_input("📍 Cidade:", placeholder="Sua cidade")
@@ -136,11 +141,18 @@ def coletar_dados_pessoais():
                 st.session_state.dados_pessoais = {
                     'nome': nome,
                     'idade': idade,
+                    'sexo': sexo,
                     'cidade': cidade,
                     'filhos': filhos
                 }
                 st.session_state.etapa = 'perguntas'
-                st.session_state.perguntas_selecionadas = get_perguntas_aleatorias(10)
+                
+                # Gerar perguntas de qualidade
+                with st.spinner('🔍 Gerando perguntas do protocolo Conecta 60+...'):
+                    perguntas = get_perguntas_gratuitas(num_perguntas=10)
+                    # GARANTIR EXATAMENTE 10 PERGUNTAS
+                    st.session_state.perguntas_selecionadas = perguntas[:10]
+                
                 st.session_state.respostas = {}
                 st.session_state.pergunta_atual = 0
                 st.rerun()
@@ -149,18 +161,22 @@ def coletar_dados_pessoais():
 
 
 def realizar_questionario():
-    """Realiza o questionário com perguntas aleatórias"""
-    st.markdown('<h2 class="sub-header">📝 Questionário AMPI</h2>', unsafe_allow_html=True)
+    """Realiza o questionário com perguntas extraídas do PDF"""
+    st.markdown('<h2 class="sub-header">📝 Questionário Conecta 60+</h2>', unsafe_allow_html=True)
     
     perguntas = st.session_state.perguntas_selecionadas
     pergunta_atual = st.session_state.pergunta_atual
     
-    # Barra de progresso
-    progresso = (pergunta_atual / len(perguntas)) * 100
-    st.progress(progresso / 100)
-    st.write(f"Pergunta {pergunta_atual + 1} de {len(perguntas)}")
+    # CORREÇÃO: Limitar a 10 perguntas
+    total_perguntas = min(len(perguntas), 10)
     
-    if pergunta_atual < len(perguntas):
+    # Barra de progresso
+    progresso = (pergunta_atual / total_perguntas) * 100
+    st.progress(progresso / 100)
+    st.write(f"Pergunta {pergunta_atual + 1} de {total_perguntas}")
+    
+    # CORREÇÃO: Verificar se ainda há perguntas E se não passou de 10
+    if pergunta_atual < total_perguntas:
         pergunta = perguntas[pergunta_atual]
         
         st.markdown(f"### {pergunta['pergunta']}")
@@ -287,7 +303,33 @@ def mostrar_resultado():
     
     with col1:
         if st.button("📄 Baixar Relatório PDF", use_container_width=True):
-            st.info("Funcionalidade de PDF será implementada em breve!")
+            try:
+                # Gerar PDF
+                pdf_buffer = gerar_pdf_relatorio(
+                    dados,
+                    analise,
+                    st.session_state.perguntas_selecionadas,
+                    st.session_state.respostas
+                )
+                
+                # Nome do arquivo
+                nome_arquivo = f"relatorio_conecta60_{dados['nome'].replace(' ', '_')}_{datetime.now().strftime('%Y%m%d')}.pdf"
+                
+                # Botão de download
+                st.download_button(
+                    label="💾 Download PDF Pronto!",
+                    data=pdf_buffer,
+                    file_name=nome_arquivo,
+                    mime="application/pdf",
+                    use_container_width=True,
+                    type="primary"
+                )
+                
+                st.success("✅ PDF gerado com sucesso! Clique acima para baixar.")
+                
+            except Exception as e:
+                st.error(f"❌ Erro ao gerar PDF: {e}")
+                st.info("💡 Instale a biblioteca: pip install reportlab --break-system-packages")
     
     with col2:
         if st.button("🔄 Nova Avaliação", use_container_width=True, type="primary"):
@@ -531,7 +573,7 @@ def exportar_dados(df):
                 st.download_button(
                     label="💾 Download Excel",
                     data=output,
-                    file_name=f"ampi_dados_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
+                    file_name=f"conecta60_dados_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                     use_container_width=True
                 )
@@ -546,7 +588,7 @@ def exportar_dados(df):
         st.download_button(
             label="⬇️ Baixar CSV",
             data=csv,
-            file_name=f"ampi_dados_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            file_name=f"conecta60_dados_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
             mime="text/csv",
             use_container_width=True
         )
@@ -605,13 +647,13 @@ def configuracoes_sistema():
     
     with info_col1:
         st.write("**Versão:** 1.0.0")
-        st.write("**Modelo LLM:** GPT-3.5-turbo")
-        st.write("**Embeddings:** HuggingFace")
+        st.write("**Sistema:** Conecta 60+")
+        st.write("**Embeddings:** HuggingFace (Gratuito)")
     
     with info_col2:
         st.write(f"**Banco de Dados:** {config.DATABASE_FILE}")
-        st.write(f"**Total de Perguntas:** {len(PERGUNTAS_AMPI)}")
-        st.write(f"**Perguntas por Avaliação:** 10")
+        st.write("**Perguntas:** Extraídas do PDF")
+        st.write("**Perguntas por Avaliação:** 10")
 
 
 # Executar aplicação

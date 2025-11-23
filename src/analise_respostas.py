@@ -26,8 +26,8 @@ def analisar_respostas(perguntas_respondidas, respostas):
         # Calcular pontos baseado na resposta
         indice_resposta = pergunta['opcoes'].index(resposta) if resposta in pergunta['opcoes'] else 0
         
-        # Somar pontos para cada especialidade
-        for especialidade, peso in pergunta['pesos'].items():
+        # CORRIGIDO: usar 'especialidades' ao invés de 'pesos'
+        for especialidade, peso in pergunta['especialidades'].items():
             if especialidade not in scores:
                 scores[especialidade] = 0
             
@@ -45,7 +45,8 @@ def analisar_respostas(perguntas_respondidas, respostas):
             'urgencia': 'baixa',
             'scores': {},
             'categorias_problema': [],
-            'recomendacao': 'Consulta de rotina recomendada'
+            'recomendacao': 'Consulta de rotina recomendada',
+            'pontuacao_total': 0
         }
     
     especialidade_principal = max(scores, key=scores.get)
