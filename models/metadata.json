@@ -1,0 +1,35 @@
+{
+  "versao": "1.0",
+  "data_treinamento": "2025-01-XX",
+  "modelo": "RandomForestClassifier",
+  "hiperparametros": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "min_samples_split": 5,
+    "min_samples_leaf": 2,
+    "random_state": 42
+  },
+  "metricas": {
+    "train_accuracy": 1.0,
+    "test_accuracy": 1.0,
+    "cv_mean": 1.0,
+    "cv_std": 0.0
+  },
+  "dados": {
+    "n_samples_total": 1000,
+    "n_samples_train": 800,
+    "n_samples_test": 200,
+    "n_features": 100
+  },
+  "classes": {
+    "0": "geriatria",
+    "1": "cardiologia",
+    "2": "neurologia",
+    "3": "ortopedia",
+    "4": "psiquiatria",
+    "5": "nutricao",
+    "6": "urologia",
+    "7": "oftalmologia",
+    "8": "otorrinolaringologia"
+  }
+}
