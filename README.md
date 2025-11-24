@@ -36,14 +36,130 @@
 
 ---
 
+<a name="motivacao"></a>
+## 💭 Por Que Este Projeto Existe?
+
+### 🌍 O Desafio do Envelhecimento Populacional
+
+O Brasil está envelhecendo rapidamente. Segundo o IBGE, em 2030 teremos mais idosos do que crianças e adolescentes. Essa transformação demográfica traz desafios imensos ao sistema de saúde: filas intermináveis, especialistas sobrecarregados, e idosos perdidos em um labirinto burocrático em busca do atendimento adequado.
+
+### 👴👵 A Realidade que Nos Motivou
+
+Durante pesquisas sobre saúde geriátrica, nos deparamos com situações reais que nos tocaram profundamente:
+
+**Exemplo 1:** Uma idosa de 68 anos passou por 4 consultas diferentes até descobrir que seu problema era ortopédico, não cardíaco. Resultado: meses de dor, gastos desnecessários e frustração.
+
+**Exemplo 2:** Um senhor de 72 anos foi encaminhado ao cardiologista quando na verdade precisava de um geriatra para avaliação multidimensional. O resultado? Diagnósticos fragmentados que não enxergavam o paciente como um todo.
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[😔 Idoso com sintomas] --> B[🏥 Consulta 1: Clínico]
+    B --> C[🏥 Consulta 2: Especialista errado]
+    C --> D[🏥 Consulta 3: Outro especialista]
+    D --> E[🏥 Consulta 4: Finalmente correto]
+    
+    A2[😊 Idoso com sintomas] --> F[🤖 Conecta 60+]
+    F --> G[✅ Especialista correto]
+    
+    style A fill:#ffcccc
+    style E fill:#ffcccc
+    style A2 fill:#ccffcc
+    style G fill:#ccffcc
+```
+
+</div>
+
+### 💡 A Solução: Tecnologia a Serviço da Longevidade
+
+E se pudéssemos usar **Inteligência Artificial** para guiar esses pacientes ao profissional certo logo na primeira vez?
+
+Foi assim que nasceu o **Conecta 60+**: um sistema que, através de um questionário estruturado baseado no protocolo AMPI (Avaliação Multidimensional do Paciente Idoso), utiliza Machine Learning para recomendar a especialidade médica mais adequada com **89% de acurácia**.
+
+### 🎯 O Impacto Real no Cotidiano
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+#### 👴 Para o Idoso
+✅ Menos consultas desnecessárias  
+✅ Atendimento direcionado  
+✅ Dignidade preservada  
+✅ Visão integrada da saúde
+
+</td>
+<td width="33%" align="center">
+
+#### 🏥 Para o Sistema
+✅ Redução de filas  
+✅ Otimização de recursos  
+✅ Triagem inteligente (89%)  
+✅ Atende milhares simultaneamente
+
+</td>
+<td width="33%" align="center">
+
+#### 👨‍👩‍👧 Para a Família
+✅ Tranquilidade  
+✅ Economia de tempo e dinheiro  
+✅ Menos deslocamentos  
+✅ Mais tempo de qualidade
+
+</td>
+</tr>
+</table>
+
+### 🏥 Por Que o Protocolo AMPI?
+
+O AMPI não olha apenas para doenças isoladas. Ele enxerga o idoso como um **ser integral**:
+
+<div align="center">
+
+| Dimensão | Avaliação |
+|:--------:|:----------|
+| 🚶 **Mobilidade** | Capacidade de andar, quedas, equilíbrio |
+| 🧠 **Cognição** | Memória, orientação, raciocínio |
+| ❤️ **Cardiovascular** | Coração, pressão arterial, circulação |
+| 🍽️ **Nutrição** | Alimentação, peso, apetite |
+| 😊 **Emocional** | Humor, ansiedade, depressão |
+| 😴 **Sono** | Qualidade do descanso, insônia |
+| 👁️ **Sentidos** | Visão e audição |
+| 💊 **Medicamentos** | Polifarmácia, adesão ao tratamento |
+| 👨‍👩‍👧 **Social** | Rede de apoio, isolamento |
+
+</div>
+
+Essa **visão 360°** é o que faz a diferença entre encaminhar para o especialista correto ou perpetuar um ciclo de consultas frustrantes.
+
+### 🚀 Nossa Missão
+
+<div align="center">
+
+> ### *"Transformar dados em cuidados"*
+> 
+> Queremos que cada idoso brasileiro tenha acesso a uma triagem inteligente, rápida e precisa.  
+> Que nenhum paciente precise sofrer meses até o diagnóstico correto.  
+> Que cada pessoa seja vista de forma integral, não fragmentada.
+
+**Esta não é apenas uma aplicação de IA.**  
+**É nossa resposta a um problema real que afeta milhões de brasileiros todos os dias.**
+
+</div>
+
+---
+
 ## 📖 Índice
 
+- [💭 Por Que Este Projeto Existe?](#motivacao)
 - [🎯 Sobre o Projeto](#sobre)
 - [❓ Problema](#problema)
 - [🤖 Tecnologias de IA](#tecnologias)
 - [📊 Dados](#dados)
 - [🏗️ Arquitetura](#arquitetura)
 - [⚙️ Instalação](#instalacao)
+- [📸 Interface do Sistema](#screenshots)
 - [📈 Resultados](#resultados)
 - [📊 Gráficos](#graficos)
 - [🎥 Vídeo Demonstração](#video)
@@ -392,6 +508,117 @@ Acesse: **http://localhost:8501**
 
 ---
 
+<a name="screenshots"></a>
+## 📸 Interface do Sistema
+
+### 🏠 Tela Inicial
+
+<div align="center">
+
+![Tela Inicial](assets/screenshot_home.png)
+
+*Página inicial com objetivos, método e resultados do Conecta 60+*
+
+</div>
+
+A interface apresenta de forma clara:
+- 🎯 **Objetivo**: Avaliar riscos de saúde em idosos
+- 📋 **Método**: Questionário adaptativo inteligente
+- 🏥 **Resultado**: Encaminhamento médico personalizado
+
+---
+
+### 📋 Questionário Interativo
+
+<div align="center">
+
+![Questionário](assets/screenshot_questionario.png)
+
+*Sistema de perguntas com barra de progresso e navegação intuitiva*
+
+</div>
+
+**Características:**
+- ✅ Barra de progresso visual (9 de 10)
+- ✅ Perguntas claras e objetivas
+- ✅ Opções de resposta baseadas no protocolo AMPI
+- ✅ Navegação entre perguntas (Anterior/Próxima)
+
+---
+
+### 🎯 Resultado da Avaliação
+
+<div align="center">
+
+![Resultado](assets/screenshot_resultado.png)
+
+*Análise detalhada com especialidade recomendada, nível de urgência e áreas de atenção*
+
+</div>
+
+**Informações apresentadas:**
+- 🏥 **Especialidade Recomendada**: Otorrinolaringologia
+- 🔴 **Nível de Urgência**: Alta (pontuação 15)
+- ⚠️ **Áreas que requerem atenção**: Social, equilíbrio, sono, cardiovascular, mobilidade, nutricional
+- 💡 **Recomendação**: Agendar consulta o mais breve possível
+- 📊 **Análise Detalhada**: Top especialidades recomendadas
+
+---
+
+### 📊 Dashboard Administrativo
+
+<div align="center">
+
+![Dashboard Admin](assets/screenshot_dashboard.png)
+
+*Painel de controle com estatísticas gerais do sistema*
+
+</div>
+
+**Métricas em tempo real:**
+- 👥 **Total de Pacientes**: 18
+- 📅 **Atendimentos Hoje**: 3
+- 📈 **Idade Média**: 71.6 anos
+- 🚨 **Urgências Altas**: 9
+
+---
+
+### 📈 Gráficos e Análises
+
+<div align="center">
+
+![Gráficos](assets/screenshot_graficos.png)
+
+*Visualizações interativas de especialidades e níveis de urgência*
+
+</div>
+
+**Dashboards disponíveis:**
+- 🥧 **Distribuição de Encaminhamentos**: Geriatria (88.9%), Ortopedia, Otorrinolaringologia
+- 📊 **Distribuição de Urgências**: Alta (8), Média (5), Baixa (4)
+- 📑 **Exportação de relatórios**
+- ⚙️ **Configurações personalizáveis**
+
+---
+
+### 📋 Dados Completos dos Pacientes
+
+<div align="center">
+
+![Dados Pacientes](assets/screenshot_dados.png)
+
+*Tabela completa com histórico de todos os atendimentos*
+
+</div>
+
+**Funcionalidades:**
+- 🔍 **Filtros**: Por especialidade, urgência e cidade
+- 📊 **Dados detalhados**: Timestamp, nome, idade, cidade, filhos, especialidade, urgência, pontuação, categorias de risco
+- 💾 **Exportação**: Download dos dados para análise
+- 🔒 **Privacidade**: Dados anonimizados conforme LGPD
+
+---
+
 <a name="resultados"></a>
 ## 📈 Resultados
 
@@ -478,25 +705,14 @@ pie title Distribuição de Predições
 **Duração:** 8-10 minutos  
 **Formato:** Demonstração ao vivo do código funcionando
 
-### 📝 Roteiro do Vídeo
-
-```mermaid
-gantt
-    title Roteiro do Vídeo (10 min)
-    dateFormat mm:ss
-    section Introdução
-    Apresentação da equipe           :00:00, 01:00
-    Contextualização do problema     :01:00, 01:00
-    section Técnico
-    Demonstração do treino ML        :02:00, 02:00
-    Geração dos 5 gráficos          :04:00, 01:00
-    section Demo ao Vivo
-    Preenchimento do questionário    :05:00, 02:00
-    Análise com ML                   :07:00, 01:00
-    Geração do PDF                   :08:00, 01:00
-    section Conclusão
-    Resultados e próximos passos     :09:00, 01:00
-```
+**Conteúdo do vídeo:**
+1. 📖 Apresentação da equipe e motivação do projeto
+2. 💻 Demonstração do código e estrutura
+3. 🤖 Treinamento do modelo ML ao vivo
+4. 📊 Geração dos 5 gráficos obrigatórios
+5. 🌐 Aplicação funcionando (questionário + resultado)
+6. 📄 Geração de relatório PDF
+7. 🔗 Navegação pelo repositório GitHub
 
 </div>
 
