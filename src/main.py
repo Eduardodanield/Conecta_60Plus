@@ -51,7 +51,8 @@ def main():
     
     # Sidebar - Menu de navegação
     with st.sidebar:
-        st.image("https://img.icons8.com/color/96/000000/doctor-male--v1.png", width=100)
+        # Logo do Conecta 60+ com 300px
+        st.image("assets/logo_conecta60.jpg", width=300)
         st.title("Menu")
         
         pagina = st.radio(
@@ -75,7 +76,7 @@ def main():
 
 def pagina_inicio():
     """Página inicial com boas-vindas"""
-    st.markdown('<h1 class="main-header">🤖 Conecta 60+</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header"> Conecta 60+</h1>', unsafe_allow_html=True)
     st.markdown('<p style="text-align: center; font-size: 1.2rem;">Sistema de Avaliação de Risco Geriátrico Inteligente</p>', unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns(3)

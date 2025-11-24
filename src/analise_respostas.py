@@ -2,7 +2,8 @@
 
 def analisar_respostas(perguntas_respondidas, respostas):
     """
-    Analisa as respostas e retorna especialidade recomendada
+    Analisa as respostas e retorna especialidade recomendada.
+    COMPATÍVEL com o sistema de perguntas do perguntas_conecta60.py
     
     Args:
         perguntas_respondidas: Lista de perguntas que foram feitas
@@ -19,33 +20,46 @@ def analisar_respostas(perguntas_respondidas, respostas):
         resposta = respostas.get(pergunta_id, "")
         
         # Contar categorias
-        categoria = pergunta['categoria']
+        categoria = pergunta.get('categoria', 'geral')
         if categoria not in detalhes_categorias:
             detalhes_categorias[categoria] = 0
         
         # Calcular pontos baseado na resposta
-        indice_resposta = pergunta['opcoes'].index(resposta) if resposta in pergunta['opcoes'] else 0
+        # Lógica: Quanto maior o índice da opção, pior a situação
+        # Exemplo: ["Não", "Às vezes", "Frequentemente"]
+        # "Não" = índice 0 (melhor) = 0 pontos
+        # "Às vezes" = índice 1 = 1 ponto
+        # "Frequentemente" = índice 2 (pior) = 2 pontos
         
-        # CORRIGIDO: usar 'especialidades' ao invés de 'pesos'
-        for especialidade, peso in pergunta['especialidades'].items():
+        try:
+            indice_resposta = pergunta['opcoes'].index(resposta) if resposta in pergunta['opcoes'] else 0
+        except (ValueError, KeyError):
+            indice_resposta = 0
+        
+        # Somar pontos para cada especialidade baseado no peso
+        especialidades = pergunta.get('especialidades', {})
+        
+        for especialidade, peso in especialidades.items():
             if especialidade not in scores:
                 scores[especialidade] = 0
             
-            # Quanto pior a resposta, mais pontos (indice maior = mais grave)
+            # Quanto pior a resposta (índice maior), mais pontos
+            # Multiplicado pelo peso da especialidade
             scores[especialidade] += peso * indice_resposta
         
         # Contar problemas por categoria
-        if indice_resposta > 0:  # Se não for "Não" ou a primeira opção
+        if indice_resposta > 0:  # Se não for a primeira opção (geralmente "Não" ou "Nenhum")
             detalhes_categorias[categoria] += 1
     
     # Encontrar especialidade com maior pontuação
-    if not scores:
+    if not scores or all(score == 0 for score in scores.values()):
+        # Se não há pontuação ou todas são zero = paciente saudável!
         return {
             'especialidade': 'geriatria',
             'urgencia': 'baixa',
-            'scores': {},
+            'scores': {'geriatria': 0, 'clinico_geral': 0},
             'categorias_problema': [],
-            'recomendacao': 'Consulta de rotina recomendada',
+            'recomendacao': 'Excelente! Suas respostas indicam boa saúde geral. Continue com check-ups de rotina.',
             'pontuacao_total': 0
         }
     
