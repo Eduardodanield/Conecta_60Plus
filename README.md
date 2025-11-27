@@ -878,7 +878,7 @@ MIT License - Copyright (c) 2025 Conecta 60+ Team
 **Dúvidas ou sugestões?**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Conecta_60Plus-black?style=for-the-badge&logo=github)](https://github.com/Eduardodanield/Conecta_60Plus)
-[![Email](https://img.shields.io/badge/Email-Contato-red?style=for-the-badge&logo=gmail)](mailto:seu@email.com)
+[![Email](https://img.shields.io/badge/Email-Contato-red?style=for-the-badge&logo=gmail)](edwardpf02@gmail.com)
 
 
 </div>
