@@ -578,23 +578,6 @@ A interface apresenta de forma clara:
 
 ---
 
-### 📈 Gráficos e Análises
-
-<div align="center">
-
-![Gráficos](assets/screenshot_graficos.png)
-
-*Visualizações interativas de especialidades e níveis de urgência*
-
-</div>
-
-**Dashboards disponíveis:**
--  **Distribuição de Encaminhamentos**: Geriatria (88.9%), Ortopedia, Otorrinolaringologia
--  **Distribuição de Urgências**: Alta (8), Média (5), Baixa (4)
--  **Exportação de relatórios**
--  **Configurações personalizáveis**
-
----
 
 ###  Dados Completos dos Pacientes
 
