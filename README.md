@@ -808,27 +808,7 @@ Durante o desenvolvimento deste projeto, foram utilizadas as seguintes IAs assis
 
 > **Nota de Transparência:** Todas as IAs foram utilizadas como ferramentas assistivas. O código final, arquitetura e decisões técnicas são de autoria da equipe do projeto.
 
-### 📄 Papers Científicos
 
-1. **VASWANI, Ashish et al.** "Attention Is All You Need."  
-   *Advances in Neural Information Processing Systems*, 2017.  
-   > Base teórica dos Transformers utilizados nos embeddings
-
-2. **DEVLIN, Jacob et al.** "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding."  
-   *arXiv preprint arXiv:1810.04805*, 2018.  
-   > Fundamento do modelo de embeddings sentence-transformers
-
-3. **BREIMAN, Leo.** "Random Forests."  
-   *Machine Learning*, vol. 45, n. 1, p. 5-32, 2001.  
-   > Base teórica do algoritmo de classificação utilizado
-
-4. **LEWIS, Patrick et al.** "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks."  
-   *Advances in Neural Information Processing Systems*, 2020.  
-   > Fundamentação do sistema RAG implementado
-
-5. **REIMERS, Nils; GUREVYCH, Iryna.** "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks."  
-   *Proceedings of the 2019 Conference on EMNLP*, 2019.  
-   > Modelo de embeddings utilizado no ChromaDB
 
 ### 🛠️ Tecnologias Open Source
 
