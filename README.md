@@ -2,7 +2,7 @@
 
 ![Conecta 60+ Logo](assets/logo_conecta60.jpg)
 
-# 🏥 CONECTA 60+
+#  CONECTA 60+
 ### Sistema Inteligente de Triagem Geriátrica com Machine Learning
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)](https://www.python.org/)
@@ -39,11 +39,11 @@
 <a name="motivacao"></a>
 ## 💭 Por Que Este Projeto Existe?
 
-### 🌍 O Desafio do Envelhecimento Populacional
+###  O Desafio do Envelhecimento Populacional
 
 O Brasil está envelhecendo rapidamente. Segundo o IBGE, em 2030 teremos mais idosos do que crianças e adolescentes. Essa transformação demográfica traz desafios imensos ao sistema de saúde: filas intermináveis, especialistas sobrecarregados, e idosos perdidos em um labirinto burocrático em busca do atendimento adequado.
 
-### 👴👵 A Realidade que Nos Motivou
+###  A Realidade que Nos Motivou
 
 Durante pesquisas sobre saúde geriátrica, nos deparamos com situações reais que nos tocaram profundamente:
 
@@ -77,13 +77,13 @@ E se pudéssemos usar **Inteligência Artificial** para guiar esses pacientes ao
 
 Foi assim que nasceu o **Conecta 60+**: um sistema que, através de um questionário estruturado baseado no protocolo AMPI (Avaliação Multidimensional do Paciente Idoso), utiliza Machine Learning para recomendar a especialidade médica mais adequada com **89% de acurácia**.
 
-### 🎯 O Impacto Real no Cotidiano
+###  O Impacto Real no Cotidiano
 
 <table>
 <tr>
 <td width="33%" align="center">
 
-#### 👴 Para o Idoso
+####  Para o Idoso
 ✅ Menos consultas desnecessárias  
 ✅ Atendimento direcionado  
 ✅ Dignidade preservada  
@@ -92,7 +92,7 @@ Foi assim que nasceu o **Conecta 60+**: um sistema que, através de um question�
 </td>
 <td width="33%" align="center">
 
-#### 🏥 Para o Sistema
+####  Para o Sistema
 ✅ Redução de filas  
 ✅ Otimização de recursos  
 ✅ Triagem inteligente (89%)  
@@ -101,7 +101,7 @@ Foi assim que nasceu o **Conecta 60+**: um sistema que, através de um question�
 </td>
 <td width="33%" align="center">
 
-#### 👨‍👩‍👧 Para a Família
+####  Para a Família
 ✅ Tranquilidade  
 ✅ Economia de tempo e dinheiro  
 ✅ Menos deslocamentos  
@@ -111,7 +111,7 @@ Foi assim que nasceu o **Conecta 60+**: um sistema que, através de um question�
 </tr>
 </table>
 
-### 🏥 Por Que o Protocolo AMPI?
+###  Por Que o Protocolo AMPI?
 
 O AMPI não olha apenas para doenças isoladas. Ele enxerga o idoso como um **ser integral**:
 
@@ -133,7 +133,7 @@ O AMPI não olha apenas para doenças isoladas. Ele enxerga o idoso como um **se
 
 Essa **visão 360°** é o que faz a diferença entre encaminhar para o especialista correto ou perpetuar um ciclo de consultas frustrantes.
 
-### 🚀 Nossa Missão
+###  Nossa Missão
 
 <div align="center">
 
@@ -169,17 +169,12 @@ Essa **visão 360°** é o que faz a diferença entre encaminhar para o especial
 
 ---
 
-> **💡 Nota de Transparência:**  
-> Este projeto utilizou ferramentas de IA assistiva (Claude.ai, Gemini, ChatGPT) para auxílio em desenvolvimento, debug e documentação. Todo código, arquitetura e decisões técnicas são de autoria da equipe. Ver seção [Referências](#referencias) para detalhes.
-
----
-
 <a name="sobre"></a>
-## 🎯 Sobre o Projeto
+##  Sobre o Projeto
 
 > Sistema web que utiliza **Machine Learning** para triagem automatizada de pacientes idosos (60+), recomendando especialidades médicas baseado em questionário estruturado de 100 perguntas do protocolo AMPI (Avaliação Multidimensional do Paciente Idoso).
 
-### 🎪 Destaques
+###  Destaques
 
 ```mermaid
 graph LR
