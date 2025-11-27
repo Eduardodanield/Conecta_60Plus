@@ -11,7 +11,7 @@
 [![Accuracy](https://img.shields.io/badge/Accuracy-89%25-success?style=for-the-badge)](https://github.com/Eduardodanield/Conecta_60Plus)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-**Turma:** [SUA TURMA] | **Curso:** [SEU CURSO] | **Período:** Noturno | **Ano:** 2025
+**Turma:** [42] | **Curso:** [Ciência da Computação] | **Período:** Noturno | **Ano:** 2025
 
 
 
@@ -25,19 +25,19 @@
 
 | Integrante | RA | Papel Principal | Principais Entregas |
 |:----------:|:--:|:---------------:|:-------------------:|
-| **[Eduardo Daniel]** | `[2224104694]` | 🔧 Engenharia de Dados | `data_prep.py`, Jupyter Notebooks |
-| **[Eduardo Matheus]** | `[2224107415]` | 🤖 Modelagem ML | `model.py`, `train.py` |
-| **[João Paulo]** | `[2224107083]` | 📊 Avaliação & Gráficos | `evaluate.py`, reports/ |
-| **[Diogo Neves]** | `[2224102999]` | 📝 Documentação | README.md, docs/ |
-| **[João Arce]** | `[2224106223]` | 🎬 Apresentação | Vídeo, slides |
-| **[Eduardo Daniel]** | `[2224104694]` | 🎯 Gerência | Integração, testes |
+| **[Eduardo Daniel]** | `[2224104694]` |  Engenharia de Dados | `data_prep.py`, Jupyter Notebooks |
+| **[Eduardo Matheus]** | `[2224107415]` |  Modelagem ML | `model.py`, `train.py` |
+| **[João Paulo]** | `[2224107083]` | Avaliação & Gráficos | `evaluate.py`, reports/ |
+| **[Diogo Neves]** | `[2224102999]` |  Documentação | README.md, docs/ |
+| **[João Arce]** | `[2224106223]` |  Apresentação | Vídeo, slides |
+| **[Eduardo Daniel]** | `[2224104694]` |  Gerência | Integração, testes |
 
 </div>
 
 ---
 
 <a name="motivacao"></a>
-## 💭 Por Que Este Projeto Existe?
+##  Por Que Este Projeto Existe?
 
 ###  O Desafio do Envelhecimento Populacional
 
@@ -55,13 +55,13 @@ Durante pesquisas sobre saúde geriátrica, nos deparamos com situações reais 
 
 ```mermaid
 graph LR
-    A[😔 Idoso com sintomas] --> B[🏥 Consulta 1: Clínico]
-    B --> C[🏥 Consulta 2: Especialista errado]
-    C --> D[🏥 Consulta 3: Outro especialista]
-    D --> E[🏥 Consulta 4: Finalmente correto]
+    A[😔 Idoso com sintomas] --> B[ Consulta 1: Clínico]
+    B --> C[ Consulta 2: Especialista errado]
+    C --> D[ Consulta 3: Outro especialista]
+    D --> E[ Consulta 4: Finalmente correto]
     
-    A2[😊 Idoso com sintomas] --> F[🤖 Conecta 60+]
-    F --> G[✅ Especialista correto]
+    A2[😊 Idoso com sintomas] --> F[ Conecta 60+]
+    F --> G[Especialista correto]
     
     style A fill:#ffcccc
     style E fill:#ffcccc
@@ -71,7 +71,7 @@ graph LR
 
 </div>
 
-### 💡 A Solução: Tecnologia a Serviço da Longevidade
+###  A Solução: Tecnologia a Serviço da Longevidade
 
 E se pudéssemos usar **Inteligência Artificial** para guiar esses pacientes ao profissional certo logo na primeira vez?
 
@@ -178,11 +178,11 @@ Essa **visão 360°** é o que faz a diferença entre encaminhar para o especial
 
 ```mermaid
 graph LR
-    A[🏥 Paciente 60+] --> B[📋 100 Perguntas]
-    B --> C[🤖 Random Forest]
-    C --> D[⚕️ Especialidade]
-    C --> E[📊 Urgência]
-    C --> F[📄 Relatório PDF]
+    A[ Paciente 60+] --> B[ 100 Perguntas]
+    B --> C[ Random Forest]
+    C --> D[ Especialidade]
+    C --> E[ Urgência]
+    C --> F[ Relatório PDF]
     
     style A fill:#e1f5ff
     style B fill:#fff4e1
@@ -197,7 +197,7 @@ graph LR
 <a name="problema"></a>
 ## ❓ Problema
 
-### 🔍 Contexto
+###  Contexto
 
 O envelhecimento populacional brasileiro demanda sistemas eficientes de triagem médica. Atualmente:
 
@@ -208,14 +208,14 @@ O envelhecimento populacional brasileiro demanda sistemas eficientes de triagem 
 | Encaminhamentos inadequados | Predição baseada em 1000 casos |
 | Sobrecarga de especialistas | Triagem inteligente por urgência |
 
-### 🎯 Objetivo
+###  Objetivo
 
 Desenvolver um sistema de IA que, através de questionário estruturado, prediz automaticamente:
 1. **Especialidade médica** mais adequada
 2. **Nível de urgência** do atendimento
 3. **Áreas de risco** identificadas
 
-### 📊 Métricas Alvo
+###  Métricas Alvo
 
 - **Principal:** F1-Score = 0.87 ✅
 - **Secundária:** Acurácia = 89% ✅
@@ -223,9 +223,9 @@ Desenvolver um sistema de IA que, através de questionário estruturado, prediz 
 ---
 
 <a name="tecnologias"></a>
-## 🤖 Tecnologias de IA
+##  Tecnologias de IA
 
-### 🔬 Arquitetura em 3 Camadas
+###  Arquitetura em 3 Camadas
 
 ```mermaid
 flowchart TB
@@ -262,17 +262,17 @@ flowchart TB
 
 | Categoria | Tecnologia | Função |
 |:---------:|:----------:|:------:|
-| 🤖 **ML** | scikit-learn | Random Forest Classifier |
-| 🧠 **Deep Learning** | HuggingFace Transformers | Embeddings (1B parâmetros) |
-| 🗄️ **Banco Vetorial** | ChromaDB | Armazenamento semântico |
-| 🔗 **Orquestração** | LangChain | Pipeline de IA |
-| 🎨 **Interface** | Streamlit | Web App |
-| 📊 **Visualização** | Plotly, Matplotlib, Seaborn | Gráficos interativos |
-| 📄 **Relatórios** | ReportLab | Geração de PDF |
+| **ML** | scikit-learn | Random Forest Classifier |
+| **Deep Learning** | HuggingFace Transformers | Embeddings (1B parâmetros) |
+| **Banco Vetorial** | ChromaDB | Armazenamento semântico |
+| **Orquestração** | LangChain | Pipeline de IA |
+| **Interface** | Streamlit | Web App |
+| **Visualização** | Plotly, Matplotlib, Seaborn | Gráficos interativos |
+| **Relatórios** | ReportLab | Geração de PDF |
 
 </div>
 
-### 🎯 Modelo: Random Forest
+###  Modelo: Random Forest
 
 **Por que Random Forest?**
 - ✅ Robusto a overfitting (ensemble de 100 árvores)
@@ -295,9 +295,9 @@ RandomForestClassifier(
 ---
 
 <a name="dados"></a>
-## 📊 Dados
+##  Dados
 
-### 📁 Origem
+###  Origem
 
 | Tipo | Fonte | Quantidade |
 |------|-------|------------|
@@ -305,7 +305,7 @@ RandomForestClassifier(
 | **Treino** | Dados sintéticos | 1000 amostras |
 | **Categorias** | 10 áreas médicas | 9 especialidades |
 
-### 🗂️ Estrutura dos Dados
+###  Estrutura dos Dados
 
 **Features (X):** 100 dimensões
 ```
@@ -329,7 +329,7 @@ RandomForestClassifier(
 }
 ```
 
-### 🔐 Cuidados Éticos
+###  Cuidados Éticos
 
 - ✅ Dados sintéticos para treinamento inicial
 - ✅ Dados reais anonimizados (sem CPF/nome/endereço)
@@ -340,9 +340,9 @@ RandomForestClassifier(
 ---
 
 <a name="arquitetura"></a>
-## 🏗️ Arquitetura do Sistema
+##  Arquitetura do Sistema
 
-### 📂 Estrutura de Pastas
+###  Estrutura de Pastas
 
 ```
 Conecta_60Plus/
@@ -479,7 +479,7 @@ python src/evaluate.py
 
 **Saída esperada:**
 ```
-📊 CONECTA 60+ - AVALIAÇÃO E GRÁFICOS
+CONECTA 60+ - AVALIAÇÃO E GRÁFICOS
 ============================================================
 [1/5] Gerando Matriz de Confusão...
 ✅ confusion_matrix.png salvo
@@ -494,7 +494,7 @@ python src/evaluate.py
 ✅ TODOS OS GRÁFICOS GERADOS!
 ```
 
-#### **6️⃣ Executar Aplicação Web**
+#### ** Executar Aplicação Web**
 ```bash
 streamlit run src/main.py
 ```
@@ -504,9 +504,9 @@ Acesse: **http://localhost:8501**
 ---
 
 <a name="screenshots"></a>
-## 📸 Interface do Sistema
+##  Interface do Sistema
 
-### 🏠 Tela Inicial
+###  Tela Inicial
 
 <div align="center">
 
@@ -517,13 +517,13 @@ Acesse: **http://localhost:8501**
 </div>
 
 A interface apresenta de forma clara:
-- 🎯 **Objetivo**: Avaliar riscos de saúde em idosos
-- 📋 **Método**: Questionário adaptativo inteligente
-- 🏥 **Resultado**: Encaminhamento médico personalizado
+-  **Objetivo**: Avaliar riscos de saúde em idosos
+-  **Método**: Questionário adaptativo inteligente
+-  **Resultado**: Encaminhamento médico personalizado
 
 ---
 
-### 📋 Questionário Interativo
+###  Questionário Interativo
 
 <div align="center">
 
@@ -589,14 +589,14 @@ A interface apresenta de forma clara:
 </div>
 
 **Dashboards disponíveis:**
-- 🥧 **Distribuição de Encaminhamentos**: Geriatria (88.9%), Ortopedia, Otorrinolaringologia
-- 📊 **Distribuição de Urgências**: Alta (8), Média (5), Baixa (4)
-- 📑 **Exportação de relatórios**
-- ⚙️ **Configurações personalizáveis**
+-  **Distribuição de Encaminhamentos**: Geriatria (88.9%), Ortopedia, Otorrinolaringologia
+-  **Distribuição de Urgências**: Alta (8), Média (5), Baixa (4)
+-  **Exportação de relatórios**
+-  **Configurações personalizáveis**
 
 ---
 
-### 📋 Dados Completos dos Pacientes
+###  Dados Completos dos Pacientes
 
 <div align="center">
 
@@ -659,7 +659,7 @@ pie title Distribuição de Predições
 <a name="graficos"></a>
 ## 📊 Gráficos e Visualizações
 
-### 🎨 5 Gráficos Obrigatórios
+###  5 Gráficos Obrigatórios
 
 <div align="center">
 
@@ -695,19 +695,19 @@ pie title Distribuição de Predições
 
 ### 🎬 Assista à Demonstração Completa
 
-[![Vídeo no YouTube](https://img.shields.io/badge/YouTube-Assistir%20Vídeo-red?style=for-the-badge&logo=youtube)](SEU_LINK_AQUI)
+[![Vídeo no YouTube](https://www.youtube.com/watch?v=2IDZruarwHk&t=45s)
 
-**Duração:** 8-10 minutos  
-**Formato:** Demonstração ao vivo do código funcionando
+**Duração:** 8:08 minutos  
+**Formato:** Demonstração do Projeto
 
 **Conteúdo do vídeo:**
-1. 📖 Apresentação da equipe e motivação do projeto
-2. 💻 Demonstração do código e estrutura
-3. 🤖 Treinamento do modelo ML ao vivo
-4. 📊 Geração dos 5 gráficos obrigatórios
-5. 🌐 Aplicação funcionando (questionário + resultado)
-6. 📄 Geração de relatório PDF
-7. 🔗 Navegação pelo repositório GitHub
+1.  Apresentação da equipe e motivação do projeto
+2.  Demonstração do código e estrutura
+3.  Treinamento do modelo ML ao vivo
+4.  Geração dos 5 gráficos obrigatórios
+5.  Aplicação funcionando (questionário + resultado)
+6.  Geração de relatório PDF
+7.  Navegação pelo repositório GitHub
 
 </div>
 
@@ -730,7 +730,7 @@ pie title Distribuição de Predições
 - ✅ **Seed fixo (42):** Reprodutibilidade garantida
 - ✅ **Stratified split:** Mantém balanceamento
 
-### 🚀 Melhorias Futuras
+###  Melhorias Futuras
 
 ```mermaid
 mindmap
@@ -761,7 +761,7 @@ mindmap
 - **Prof. Felipe Santos de Jesus**  
   Disciplina: Inteligência Artificial  
   4º Semestre - Ciência da Computação  
-  Instituição: [Nome da Universidade]
+  Instituição: [Universidade Nove de Julho]
 
 ### 📖 Livros
 
@@ -834,7 +834,7 @@ MIT License - Copyright (c) 2025 Conecta 60+ Team
 ---
 
 <a name="agradecimentos"></a>
-## 🙏 Agradecimentos
+##  Agradecimentos
 
 <div align="center">
 
@@ -846,7 +846,7 @@ MIT License - Copyright (c) 2025 Conecta 60+ Team
   *Disciplina de Inteligência Artificial - 4º Semestre*  
   Orientação técnica, revisão da arquitetura e validação do modelo de ML
 
-- 🏫 **[Nome da Universidade/Faculdade]**  
+- 🏫 **[Universidade Nove de Julho]**  
   Suporte acadêmico e infraestrutura para desenvolvimento
 
 - 👨‍💻 **Fernando Amaral**  
@@ -856,7 +856,7 @@ MIT License - Copyright (c) 2025 Conecta 60+ Team
 - 📺 **Canal HashTag Programação**  
   Tutoriais fundamentais para implementação de Python e ML
 
-- 🏥 **Profissionais de Saúde**  
+- 🏥 **Profissionais de Saúde UBS Orion e o serviço Centro Dia para Idoso Santa Clara**  
   Validação clínica do protocolo AMPI e das perguntas
 
 - 🤖 **Comunidade Open Source**  
@@ -867,7 +867,7 @@ MIT License - Copyright (c) 2025 Conecta 60+ Team
 
 ---
 
-**Este projeto não seria possível sem o apoio e conhecimento compartilhado por toda a comunidade!** 💙
+**Este projeto não seria possível sem o apoio e conhecimento compartilhado por toda a comunidade!** 
 
 ---
 
@@ -880,11 +880,6 @@ MIT License - Copyright (c) 2025 Conecta 60+ Team
 [![GitHub](https://img.shields.io/badge/GitHub-Conecta_60Plus-black?style=for-the-badge&logo=github)](https://github.com/Eduardodanield/Conecta_60Plus)
 [![Email](https://img.shields.io/badge/Email-Contato-red?style=for-the-badge&logo=gmail)](mailto:seu@email.com)
 
----
-
-**Desenvolvido com ❤️ pela equipe Conecta 60+**
-
-*Transformando dados em cuidados* 🏥
 
 </div>
 
