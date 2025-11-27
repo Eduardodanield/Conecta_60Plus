@@ -13,7 +13,7 @@
 
 **Turma:** [SUA TURMA] | **Curso:** [SEU CURSO] | **Período:** Noturno | **Ano:** 2025
 
-[🎥 Vídeo Demonstração](#video) | [📊 Gráficos](#graficos) | [🚀 Como Usar](#instalacao)
+
 
 </div>
 
