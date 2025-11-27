@@ -25,12 +25,12 @@
 
 | Integrante | RA | Papel Principal | Principais Entregas |
 |:----------:|:--:|:---------------:|:-------------------:|
-| **[Nome 1]** | `[RA]` | 🔧 Engenharia de Dados | `data_prep.py`, Jupyter Notebooks |
-| **[Nome 2]** | `[RA]` | 🤖 Modelagem ML | `model.py`, `train.py` |
-| **[Nome 3]** | `[RA]` | 📊 Avaliação & Gráficos | `evaluate.py`, reports/ |
-| **[Nome 4]** | `[RA]` | 📝 Documentação | README.md, docs/ |
-| **[Nome 5]** | `[RA]` | 🎬 Apresentação | Vídeo, slides |
-| **[Nome 6]** | `[RA]` | 🎯 Gerência | Integração, testes |
+| **[Eduardo Daniel]** | `[2224104694]` | 🔧 Engenharia de Dados | `data_prep.py`, Jupyter Notebooks |
+| **[Eduardo Matheus]** | `[2224107415]` | 🤖 Modelagem ML | `model.py`, `train.py` |
+| **[João Paulo]** | `[2224107083]` | 📊 Avaliação & Gráficos | `evaluate.py`, reports/ |
+| **[Diogo Neves]** | `[2224102999]` | 📝 Documentação | README.md, docs/ |
+| **[Eduardo Daniel e João Arce]** | `[2224104694]` | 🎬 Apresentação | Vídeo, slides |
+| **[Eduardo Daniel]** | `[2224104694]` | 🎯 Gerência | Integração, testes |
 
 </div>
 
