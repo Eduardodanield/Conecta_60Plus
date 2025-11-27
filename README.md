@@ -29,7 +29,7 @@
 | **[Eduardo Matheus]** | `[2224107415]` | 🤖 Modelagem ML | `model.py`, `train.py` |
 | **[João Paulo]** | `[2224107083]` | 📊 Avaliação & Gráficos | `evaluate.py`, reports/ |
 | **[Diogo Neves]** | `[2224102999]` | 📝 Documentação | README.md, docs/ |
-| **[Eduardo Daniel e João Arce]** | `[2224104694]` | 🎬 Apresentação | Vídeo, slides |
+| **[João Arce]** | `[2224106223]` | 🎬 Apresentação | Vídeo, slides |
 | **[Eduardo Daniel]** | `[2224104694]` | 🎯 Gerência | Integração, testes |
 
 </div>
