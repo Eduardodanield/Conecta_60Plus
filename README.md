@@ -695,7 +695,7 @@ pie title Distribuição de Predições
 
 ### 🎬 Assista à Demonstração Completa
 
-[![Vídeo no YouTube](https://www.youtube.com/watch?v=2IDZruarwHk&t=45s)
+[![Vídeo no YouTube](https://img.shields.io/badge/YouTube-Assistir%20Vídeo-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=2IDZruarwHk&t=45s)
 
 **Duração:** 8:08 minutos  
 **Formato:** Demonstração do Projeto
