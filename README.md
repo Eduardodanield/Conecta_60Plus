@@ -4,6 +4,8 @@
 
 #  CONECTA 60+
 ### Sistema Inteligente de Triagem Geriátrica com Machine Learning
+[![Acessar App](https://img.shields.io/badge/🌐_Acessar_App-Streamlit-FF4B4B?style=for-the-badge)](https://conecta60plus25.streamlit.app/)
+[![Vídeo Demo](https://img.shields.io/badge/▶️_Vídeo_Demo-YouTube-FF0000?style=for-the-badge)](https://www.youtube.com/watch?v=2IDZruarwHk&t=48s)
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28-FF4B4B?style=for-the-badge&logo=streamlit)](https://streamlit.io/)
