@@ -27,11 +27,11 @@
 
 | Integrante | RA | Papel Principal | Principais Entregas |
 |:----------:|:--:|:---------------:|:-------------------:|
-| **[Eduardo Daniel]** | `[2224104694]` |  Engenharia de Dados | `data_prep.py`, Jupyter Notebooks |
-| **[Eduardo Matheus]** | `[2224107415]` |  Modelagem ML | `model.py`, `train.py` |
-| **[João Paulo]** | `[2224107083]` | Avaliação & Gráficos | `evaluate.py`, reports/ |
-| **[Diogo Neves]** | `[2224102999]` |  Documentação | README.md, docs/ |
-| **[João Arce]** | `[2224106223]` |  Apresentação | Vídeo, slides |
+| **[Eduardo Daniel Alves Sampaio]** | `[2224104694]` |  Engenharia de Dados | `data_prep.py`, Jupyter Notebooks |
+| **[Eduardo Matheus Correia Santos ]** | `[2224107415]` |  Modelagem ML | `model.py`, `train.py` |
+| **[João Paulo Nunes de Jesus Araujo Leitão ]** | `[2224107083]` | Avaliação & Gráficos | `evaluate.py`, reports/ |
+| **[Diogo Neves Oliveira ]** | `[2224102999]` |  Documentação | README.md, docs/ |
+| **[João Vitor Arce de Araujo ]** | `[2224106223]` |  Apresentação | Vídeo, slides |
 | **[Eduardo Daniel]** | `[2224104694]` |  Gerência | Integração, testes |
 
 </div>
