@@ -499,7 +499,7 @@ CONECTA 60+ - AVALIAÇÃO E GRÁFICOS
 streamlit run src/main.py
 ```
 
-Acesse: **http://localhost:8501**
+Acesse: **[http://localhost:8501](https://conecta60plus25.streamlit.app/)**
 
 ---
 
